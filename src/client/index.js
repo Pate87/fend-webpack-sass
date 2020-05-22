@@ -11,7 +11,5 @@ export {
     handleSubmit
 }
 
-console.log(checkForName);
-
-alert("I EXIST")
+alert("Test run")
 console.log("CHANGE!!");
