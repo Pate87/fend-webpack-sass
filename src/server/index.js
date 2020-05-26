@@ -1,8 +1,15 @@
+var aylien = require("aylien_textapi");
 var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 
 const app = express()
+
+// set aylien API credentias
+var textapi = new aylien({
+    application_id: "your-api-id",
+    application_key: "your-key"
+});
 
 app.use(express.static('dist'))
 
