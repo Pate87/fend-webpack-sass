@@ -30,3 +30,17 @@ app.listen(8081, function () {
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+
+// POST ROUTE
+
+app.get('/test', function (req, res) {
+    console.log(req.body);
+    res.send(req.body);
+    res.send(mockAPIResponse)
+    textapi.sentiment({
+        'url': req.body.text
+      }, function(error, response) {
+          res.send(response)
+          console.log(response)
+      });
+})
